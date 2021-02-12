@@ -33,6 +33,7 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.lblCodBarras = new System.Windows.Forms.Label();
             this.txtCodigoBarras = new System.Windows.Forms.TextBox();
+            this.lblArquivo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,11 +72,21 @@
             this.txtCodigoBarras.Size = new System.Drawing.Size(454, 20);
             this.txtCodigoBarras.TabIndex = 3;
             // 
+            // lblArquivo
+            // 
+            this.lblArquivo.AutoSize = true;
+            this.lblArquivo.Location = new System.Drawing.Point(15, 298);
+            this.lblArquivo.Name = "lblArquivo";
+            this.lblArquivo.Size = new System.Drawing.Size(13, 13);
+            this.lblArquivo.TabIndex = 4;
+            this.lblArquivo.Text = "  ";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 343);
+            this.Controls.Add(this.lblArquivo);
             this.Controls.Add(this.txtCodigoBarras);
             this.Controls.Add(this.lblCodBarras);
             this.Controls.Add(this.pictureBox);
@@ -95,6 +106,7 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.Label lblCodBarras;
         private System.Windows.Forms.TextBox txtCodigoBarras;
+        private System.Windows.Forms.Label lblArquivo;
     }
 }
 

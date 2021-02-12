@@ -13,7 +13,7 @@ namespace BarcodeDecodeApp.BarcodeDecoder.libs
         {
             BarcodeReader reader = new BarcodeReader();
             return null;
-            //PArece 
+            
            // reader.DecodeBitmap();
         }
     }

@@ -18,19 +18,20 @@ namespace BarcodeDecodeApp
             {
                 try
                 {
-
-                    CustomBarcodeReader customBarcodeReader = new SpireBarcodeReader(filedialog.FileName);
+                    string file = filedialog.FileName;
+                    CustomBarcodeReader customBarcodeReader = new SpireBarcodeReader(file);
                     Barcode barcode = customBarcodeReader.Decode();
 
                     if(barcode.Code != null)
                     {
+                        lblArquivo.Text = file;
                         txtCodigoBarras.Text = barcode.Code;
                         pictureBox.Image = barcode.Bitmap;
                     }                  
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message + ":  \n"+ ex.StackTrace, "ERRO AO LER IMAGEM!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
